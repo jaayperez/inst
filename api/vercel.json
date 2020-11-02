@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "inst-api",
+  "builds": [
+    {
+      "src": "./src/index.ts",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/graphql",
+      "dest": "src/index.ts"
+    }
+  ]
+}

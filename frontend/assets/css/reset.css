@@ -1,0 +1,726 @@
+body * {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue',
+    'Helvetica', 'Arial', 'Open Sans', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.row div[class*='col-'] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div[data-baseweb='popover'] {
+  z-index: 2;
+}
+
+div[data-baseweb='popover'] ul li a.active {
+  color: #000000;
+  background-color: rgb(246, 246, 246);
+}
+
+#__next .__debug-0 + div > div + div div[data-baseweb='popover'] {
+  z-index: 99999;
+}
+
+/**
+|--------------------------------------------------
+| style for header
+|--------------------------------------------------
+*/
+
+header .default .sticky-outer-wrapper.active .sticky-inner-wrapper {
+  z-index: 999;
+}
+
+header .default .sticky-outer-wrapper nav .logo {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  width: 0;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+header .default .sticky-outer-wrapper.active nav .logo {
+  opacity: 1;
+  visibility: visible;
+  width: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+header .default .sticky-outer-wrapper.active nav ul.main-nav {
+  padding: 0 30px;
+}
+
+header .default .sticky-outer-wrapper.active nav .cart-and-avatar {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+ul.main-nav li a.active,
+ul.mobile-menu li a.active,
+ul.side-menu li a.active,
+ul.side-menu.alt li.active {
+  color: #000000;
+  position: relative;
+}
+
+.dark ul.main-nav li a.active,
+ul.mobile-menu.dark li a.active,
+.dark ul.side-menu li a.active,
+.dark ul.side-menu.alt li.active {
+  color: #ffffff;
+}
+
+ul.side-menu {
+  -webkit-transition: padding-top 0.3s ease;
+  -o-transition: padding-top 0.3s ease;
+  transition: padding-top 0.3s ease;
+}
+
+.sticky-outer-wrapper.active ul.side-menu {
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 1135px) {
+  .sticky-outer-wrapper.active ul.side-menu,
+  .sticky-outer-wrapper.active ul.scrollspy-menu {
+    margin-top: 41px;
+  }
+}
+
+@media only screen and (max-width: 1135px) {
+  .sticky-outer-wrapper.active .side-menu-wrapper {
+    -webkit-box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.16);
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.16);
+  }
+  .dark .sticky-outer-wrapper.active .side-menu-wrapper {
+    -webkit-box-shadow: 0 1px 4px hsla(255, 255%, 255%, 0.16);
+    box-shadow: 0 1px 4px hsla(255, 255%, 255%, 0.16);
+  }
+}
+
+ul.main-nav li a.active::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #000000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.dark ul.main-nav li a.active::after {
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 991px) {
+  ul.mobile-menu li a.active {
+    font-weight: 600;
+  }
+}
+
+.dark .logo .svg-icon,
+.dark .badge .svg-icon svg path,
+.dark .step-menu + div .svg-icon svg {
+  fill: #eeeeee;
+}
+
+.profile-menu .active {
+  color: #000000;
+  font-weight: 500;
+}
+
+.dark .profile-menu .active {
+  color: #e2e2e2;
+}
+
+/**
+|--------------------------------------------------
+| style for gallery
+|--------------------------------------------------
+*/
+
+#gallery.glide {
+  position: relative;
+  height: 100%;
+}
+
+#gallery .glide__track {
+  height: 100%;
+}
+
+#gallery .glide__slides {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+#gallery .glide__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#gallery .glide__controls > div {
+  position: absolute;
+  top: calc(50% - 15px);
+  cursor: pointer;
+}
+
+#gallery .glide__controls > div svg {
+  width: 28px;
+  height: auto;
+  fill: rgba(0, 0, 0, 0.7);
+}
+
+.dark #gallery .glide__controls > div svg {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+#gallery .glide__controls > div.glide__prev--area {
+  left: 11px;
+  right: auto;
+}
+
+#gallery .glide__controls > div.glide__next--area {
+  left: auto;
+  right: 11px;
+}
+
+#gallery .glide__bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 15px;
+}
+
+#gallery .glide__bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 4px;
+  background-color: #ffffff;
+}
+
+.dark #gallery .glide__bullet {
+  background-color: #000000;
+}
+
+#gallery .glide__bullet--active {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark #gallery .glide__bullet--active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/**
+|--------------------------------------------------
+| style for product gallery
+|--------------------------------------------------
+*/
+
+#productGallery .glide__track {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  margin-bottom: 30px;
+}
+
+.dark #productGallery .glide__track {
+  background-color: #000000;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 8px;
+  box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 8px;
+}
+
+#productGallery .glide__bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+#productGallery .glide__thumb {
+  border: 2px solid #ffffff;
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.dark #productGallery .glide__thumb {
+  border-color: #000000;
+}
+
+#productGallery .glide__thumb.glide__bullet--active {
+  border-color: #000000;
+  background-color: #ffffff;
+}
+
+.dark #productGallery .glide__thumb.glide__bullet--active {
+  border-color: #ffffff;
+  background-color: #000000;
+}
+
+/**
+|--------------------------------------------------
+| style for comment anchor and iframe
+|--------------------------------------------------
+*/
+
+.comment > div > span a {
+  color: #276ef1;
+  text-decoration: none;
+}
+
+.video-container iframe {
+  width: 100% !important;
+}
+
+/**
+|--------------------------------------------------
+| style for step menu
+|--------------------------------------------------
+*/
+
+.step-menu li::before {
+  content: '';
+  width: 70px;
+  background-image: url(../images/line.svg);
+  background-repeat: no-repeat;
+  height: 2px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  left: -77px;
+  top: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .step-menu li::before {
+    display: none;
+  }
+}
+
+body[dir='rtl'] .step-menu li::before {
+  left: auto;
+  right: -77px;
+}
+
+.step-menu li:first-child::before {
+  content: none;
+}
+
+.step-menu li.active {
+  color: #000000;
+  border-color: #000000;
+}
+
+.dark .step-menu li.active {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.step-menu li.active svg path {
+  fill: #000000;
+}
+
+.dark .step-menu li.active svg path {
+  fill: #ffffff;
+}
+
+.Toastify {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Toastify .Toastify__toast-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  right: auto;
+  top: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.Toastify .Toastify__toast--default {
+  min-height: 56px;
+  width: auto;
+  font-size: 16px;
+  color: #ffffff;
+  background: #000000;
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+.dark .Toastify .Toastify__toast--default {
+  color: #000000;
+  background: #ffffff;
+}
+
+.Toastify .fancy-progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark .Toastify .fancy-progress-bar {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dark .apexcharts-menu-item:hover,
+.dark .apexcharts-tooltip {
+  color: #000000;
+}
+
+.dark text {
+  fill: #ffffff;
+}
+
+.dark .apexcharts-legend-text {
+  color: #ffffff !important;
+}
+
+.apexcharts-menu .apexcharts-menu-item {
+  color: #000000;
+  text-align: left;
+}
+
+body[dir='rlt'] .apexcharts-menu .apexcharts-menu-item {
+  text-align: right;
+}
+
+/**
+|--------------------------------------------------
+| style for apexcharts and ltr, rtl
+|--------------------------------------------------
+*/
+
+div[data-baseweb='card'] .apexcharts-canvas {
+  padding-top: 20px;
+}
+
+div[data-baseweb='card'] .padding-control .apexcharts-canvas {
+  padding-top: 50px;
+}
+
+div[data-baseweb='card'] .apexcharts-canvas .apexcharts-toolbar {
+  left: auto;
+  right: 0;
+}
+
+body[dir='rtl']
+  div[data-baseweb='card']
+  .apexcharts-canvas
+  .apexcharts-toolbar {
+  left: 0;
+  right: auto;
+}
+
+body[dir='ltr'] .listgrid-card.has-thumb {
+  margin-left: -18px;
+}
+
+body[dir='rtl'] .listgrid-card.has-thumb {
+  margin-right: -18px;
+}
+
+body[dir='rtl'] div[data-baseweb='modal'] button[aria-label='Close'] {
+  right: auto;
+  left: 12px;
+}
+
+body[dir='rtl'] div[data-baseweb='modal'] .followers-list {
+  padding-left: 35px;
+  padding-right: 0;
+}
+
+/**
+|--------------------------------------------------
+| style for apexcharts
+|--------------------------------------------------
+*/
+
+.dark .apexcharts-radialbar-hollow {
+  fill: transparent;
+}
+
+.dark .apexcharts-radialbar-hollow + g text {
+  fill: #ffffff;
+}
+
+/**
+|--------------------------------------------------
+| style for html content
+|--------------------------------------------------
+*/
+
+.scrollspy-menu li.is-current a {
+  color: #000000;
+  font-weight: 500;
+}
+
+.dark .scrollspy-menu li.is-current a {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  .scrollspy-menu {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    background-color: #ffffff;
+  }
+  .dark .scrollspy-menu {
+    background-color: #000000;
+  }
+}
+
+.html-content p {
+  margin-bottom: 20px;
+}
+
+.html-content p:last-child {
+  margin-bottom: 0;
+}
+
+.html-content ul,
+.html-content ol {
+  margin: 20px 0;
+  padding-left: 18px;
+}
+
+.html-content ul li,
+.html-content ol li {
+  padding: 10px 0;
+}
+
+/**
+|--------------------------------------------------
+| style for glide
+|--------------------------------------------------
+*/
+
+.glide__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.glide__prev--area > *,
+.glide__next--area > * {
+  pointer-events: all;
+}
+
+/**
+|--------------------------------------------------
+| style for Calendar
+|--------------------------------------------------
+*/
+
+.rbc-calendar .rbc-toolbar {
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 667px) {
+  .rbc-calendar .rbc-toolbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .rbc-calendar .rbc-toolbar-label {
+    margin: 10px 0;
+  }
+}
+
+.rbc-calendar .rbc-toolbar .rbc-toolbar-label {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.rbc-calendar .rbc-toolbar .rbc-btn-group button {
+  cursor: pointer;
+  min-height: 40px;
+  color: #000000;
+  font-size: 14px;
+  border-radius: 0;
+  border-color: #dadada;
+  background-color: #f6f6f6;
+}
+
+.dark .rbc-calendar .rbc-toolbar .rbc-btn-group button {
+  color: #ffffff;
+  background-color: #060606;
+}
+
+.rbc-calendar .rbc-toolbar .rbc-btn-group button.rbc-active,
+.rbc-calendar .rbc-toolbar .rbc-btn-group button.rbc-active:hover {
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #000000;
+  background-color: #000000;
+}
+
+.dark .rbc-calendar .rbc-toolbar .rbc-btn-group button.rbc-active,
+.dark .rbc-calendar .rbc-toolbar .rbc-btn-group button.rbc-active:hover {
+  color: #000000;
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+
+.rbc-calendar .rbc-toolbar .rbc-btn-group button:hover {
+  border-color: #dadada;
+  background-color: #eeeeee;
+}
+
+.rbc-calendar .rbc-toolbar .rbc-btn-group button:focus {
+  outline: none;
+}
+
+.rbc-calendar .rbc-header,
+.rbc-calendar .rbc-agenda-view table.rbc-agenda-table thead > tr > th {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.rbc-calendar .rbc-row.rbc-time-header-cell {
+  min-height: 41px;
+}
+
+.rbc-calendar .rbc-event {
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #21a453;
+}
+
+.rbc-calendar .rbc-show-more {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.dark .rbc-toolbar-label,
+.dark .rbc-calendar .rbc-header,
+.dark .rbc-calendar .rbc-show-more,
+.dark .rbc-date-cell a {
+  color: #ffffff;
+}
+
+.dark .rbc-off-range-bg,
+.dark .rbc-day-bg.rbc-today {
+  background-color: #333333;
+}
+
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.loader svg {
+  width: 70px;
+  height: auto;
+}
+
+.dark .loader svg {
+  fill: #ffffff;
+}
+
+input[aria-describedby='datepicker--screenreader--message--input'] {
+  background-color: #ffffff;
+}
+
+.dark input[aria-describedby='datepicker--screenreader--message--input'] {
+  background-color: #000000;
+}
+
+div[role='dialog']
+  input[aria-describedby='datepicker--screenreader--message--input'] {
+  background-color: transparent;
+}
+
+/* fix cash-flow chart toolbar position */
+
+.cash-flow .apexcharts-canvas .apexcharts-toolbar {
+  top: -28px !important;
+  right: 0 !important;
+}

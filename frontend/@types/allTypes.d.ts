@@ -1,0 +1,9 @@
+declare module 'date-arithmetic';
+declare module 'react-big-calendar';
+declare module '@glidejs/glide';
+declare module 'react-reveal/Fade';
+declare module 'react-anchor-link-smooth-scroll';
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.svg';
+declare module '*.gif';
