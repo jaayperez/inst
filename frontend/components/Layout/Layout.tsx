@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'next/router';
 import Header from 'components/Header/Header';
-import Home from '../../pages/index.tsx'
 import Footer from 'components/Footer/Footer';
 import AuthHeader from 'components/Header/AuthHeader/AuthHeader';
 import AppWrapper, { ContentWrapper } from './Layout.styled';
