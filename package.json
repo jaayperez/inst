@@ -4,7 +4,6 @@
   "description": "React Next TypeScript Admin Template",
   "author": "Justin Perez",
   "private": true,
-  "homepage": "http://jaayperez.github.io/inst",
   "workspaces": {
     "packages": [
       "api",
