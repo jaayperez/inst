@@ -18,7 +18,7 @@
     "dev": "lerna run --parallel dev",
     "build": "yarn workspaces run build",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build
+    "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
