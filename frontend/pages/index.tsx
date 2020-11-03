@@ -302,7 +302,7 @@ const Home: NextPage<{}> = () => {
 							}}
 						>
 							<StyledBody>
-								<Views className="padding-control" totalView={75} />
+								<Views className="padding-control" totalView={714} />
 							</StyledBody>
 						</Card>
 					</Cell>
