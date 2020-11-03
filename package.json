@@ -2,6 +2,7 @@
   "name": "inst",
   "version": "3.0.0",
   "description": "React Next TypeScript Admin Template",
+  "main": "index.js",
   "author": "Justin Perez",
   "private": true,
   "workspaces": {
