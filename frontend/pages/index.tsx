@@ -19,7 +19,7 @@ import Head from 'next/head';
 const productsBarOptions = [
 	{
 		color: '#FF0080',
-		label: 'Home',
+		label: 'Electronics',
 	},
 	{
 		color: '#7928CA',
@@ -27,7 +27,7 @@ const productsBarOptions = [
 	},
 	{
 		color: '#0070F3',
-		label: 'Electronics',
+		label: 'Home',
 	},
 ];
 const GET_DASHBOARD = gql`
