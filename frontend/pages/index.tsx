@@ -19,15 +19,15 @@ import Head from 'next/head';
 const productsBarOptions = [
 	{
 		color: '#FF0080',
-		label: 'Banana',
+		label: 'Home',
 	},
 	{
 		color: '#7928CA',
-		label: 'Orange',
+		label: 'Outdoor',
 	},
 	{
 		color: '#0070F3',
-		label: 'Blueberry',
+		label: 'Electronics',
 	},
 ];
 const GET_DASHBOARD = gql`
