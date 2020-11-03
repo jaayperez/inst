@@ -144,8 +144,8 @@ const ListGridCard: NextPage<{}> = () => {
 												thumbHeight="60px"
 												title="Slack"
 												description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
-												author="RedQ"
-												authorUrl="https://redq.io/"
+												author="Justin Perez"
+												authorUrl="https://justinperez.con/"
 											/>
 										</Cell>
 									</Grid>
