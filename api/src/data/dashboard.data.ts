@@ -109,7 +109,7 @@ export const loadDashboard = (): Dashboard => {
       ],
     },
     productsBar: {
-      labels: ['Apples', 'Oranges', 'Bananas'],
+      labels: ['Home', 'Outdoor', 'Electronics'],
       products: [64, 70, 76],
     },
     cashFlow: {
